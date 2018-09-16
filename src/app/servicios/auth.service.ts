@@ -16,28 +16,38 @@ export class AuthService {
     this.user = firebaseAuth.authState;
   }
 
+  //registro con email
   signup(email:string, password:string){
     return this.firebaseAuth
       .auth
       .createUserWithEmailAndPassword(email, password);
   }
 
+  //login con email
   login(email:string, password:string){
     return this.firebaseAuth
       .auth
       .signInWithEmailAndPassword(email, password);
   }
 
+  //cerrar sesion
   logout(){
     return this.firebaseAuth.auth.signOut()
   }
 
+  //verificador de estado del usuario
   getAuth(){
     return this.firebaseAuth.authState.map(auth =>auth);
   }
 
+  //login google
   googleLogin(){
     return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
+  //login facecook
+  facebookLogin(){
+    return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+  }
 }
+

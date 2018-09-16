@@ -28,7 +28,7 @@ export class LoginPageComponent implements OnInit {
       console.log("Login con exito!");
       console.log(res);
     }).catch((err) => {
-      this.flashMessage.show('Usuario y/o contraseña incorrectamente.', {cssClass: 'alert-danger', timeout: 4000});
+      this.flashMessage.show('Usuario y/o contraseña incorrecta.', {cssClass: 'alert-danger', timeout: 4000});
       this.router.navigate(['login']);
       console.log(err);
     })
@@ -36,6 +36,13 @@ export class LoginPageComponent implements OnInit {
 
   loginGoogle(){
     this.AuthService.googleLogin()
+    .then((res) => {
+      this.router.navigate(['private']);
+    }).catch(err => console.log(err.message));
+  }
+
+  loginFacebook(){
+    this.AuthService.facebookLogin()
     .then((res) => {
       this.router.navigate(['private']);
     }).catch(err => console.log(err.message));
