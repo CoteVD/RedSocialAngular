@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-// import * as firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
+import 'rxjs/operators';
+import 'rxjs/add/operator/map'; 
 
 
 @Injectable({
@@ -28,5 +30,9 @@ export class AuthService {
 
   logout(){
     return this.firebaseAuth.auth.signOut()
+  }
+
+  getAuth(){
+    return this.firebaseAuth.authState.map(auth =>auth);
   }
 }
