@@ -20,7 +20,13 @@
             <li class="nav-item" *ngIf="isLogin">
                 <a class="nav-link" [routerLink]="['login']" routerLinkActive="router-link-active" (click)="logOut()">Salir</a>
             </li>
+            <li class="nav-item" *ngIf="isLogin">
+                <a class="nav-link">{{nameUser}}</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogin">
+                <img src="{{photoUser}}" class="rounded-circle img-responsive">
+                <span class=badge pill badge-secondary>{{emailUser}}</span>
+            </li>
         </ul>
-
     </div>
 </nav>
