@@ -3,3 +3,7 @@ img.rounded-circle {
     height: 45px;
     ;
 }
+
+.linkNav a:hover {
+    color: #FBBA52 !important;
+}

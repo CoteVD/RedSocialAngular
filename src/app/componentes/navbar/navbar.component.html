@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">ChaoBullying</a>
+    <a class="navbar-brand" href="#">
+        <img src="../../../assets/img/logo-RS-final1.png" width="70" height="50" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,21 +9,21 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['home']" routerLinkActive="router-link-active">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link lead linkNav" [routerLink]="['home']" routerLinkActive="router-link-active">Inicio<span class="sr-only">(current)</span></a>
             </li>
         </ul>
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav">
             <li class="nav-item" *ngIf="!isLogin">
-                <a class="nav-link" [routerLink]="['login']" routerLinkActive="router-link-active">Login</a>
+                <a class="nav-link lead linkNav" [routerLink]="['login']" routerLinkActive="router-link-active">Login</a>
             </li>
             <li class="nav-item" *ngIf="!isLogin">
-                <a class="nav-link" [routerLink]="['register']" routerLinkActive="router-link-active">Registrarse</a>
+                <a class="nav-link lead linkNav" [routerLink]="['register']" routerLinkActive="router-link-active">Registrarse</a>
             </li>
             <li class="nav-item" *ngIf="isLogin">
-                <a class="nav-link" [routerLink]="['login']" routerLinkActive="router-link-active" (click)="logOut()">Salir</a>
+                <a class="nav-link lead linkNav" [routerLink]="['login']" routerLinkActive="router-link-active" (click)="logOut()">Salir</a>
             </li>
             <li class="nav-item" *ngIf="isLogin">
-                <a class="nav-link">{{nameUser}}</a>
+                <a class="nav-link lead linkNav">{{nameUser}}</a>
             </li>
             <li class="nav-item" *ngIf="isLogin">
                 <img src="{{photoUser}}" class="rounded-circle img-responsive">

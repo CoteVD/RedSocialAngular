@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
-  {path: '**', component:NotFoundPageComponent}
+  {path: '**', component:HomePageComponent}
 ];
 
 @NgModule({

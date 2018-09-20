@@ -1,0 +1,5 @@
+.containerApp {
+    background-image: url('../assets/fondo.jpg');
+    size: cover;
+    height: 100vh;
+}
