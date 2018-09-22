@@ -12,6 +12,17 @@
                 <a class="nav-link lead linkNav" [routerLink]="['home']" routerLinkActive="router-link-active">Inicio<span class="sr-only">(current)</span></a>
             </li>
         </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link lead linkNav" [routerLink]="['wall']" routerLinkActive="router-link-active">Muro<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link lead linkNav" [routerLink]="['chat']" routerLinkActive="router-link-active">Chat<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+
         <ul class="navbar-nav">
             <li class="nav-item" *ngIf="!isLogin">
                 <a class="nav-link lead linkNav" [routerLink]="['login']" routerLinkActive="router-link-active">Login</a>
@@ -23,12 +34,13 @@
                 <a class="nav-link lead linkNav" [routerLink]="['login']" routerLinkActive="router-link-active" (click)="logOut()">Salir</a>
             </li>
             <li class="nav-item" *ngIf="isLogin">
-                <a class="nav-link lead linkNav">{{nameUser}}</a>
+                <a class="nav-link lead linkNav" [routerLink]="['private-page']" routerLinkActive="router-link-active">{{nameUser}}</a>
             </li>
             <li class="nav-item" *ngIf="isLogin">
                 <img src="{{photoUser}}" class="rounded-circle img-responsive">
                 <span class=badge pill badge-secondary>{{emailUser}}</span>
             </li>
         </ul>
+
     </div>
 </nav>

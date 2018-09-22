@@ -8,30 +8,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-public isLogin: boolean;
-public nameUser: string;
-public emailUser: string;
-public photoUser: string;
+  public isLogin: boolean;
+  public nameUser: string;
+  public emailUser: string;
+  public photoUser: string;
 
-  constructor(
-    public authService: AuthService,
-    public router:Router
-  ) { }
+  constructor(public authService: AuthService, public router: Router) {}
 
   ngOnInit() {
     this.authService.getAuth().subscribe(auth => {
-      if(auth){
+      if (auth) {
         this.isLogin = true;
         this.nameUser = auth.displayName;
         this.emailUser = auth.email;
         this.photoUser = auth.photoURL;
-      } else{
+      } else {
         this.isLogin = false;
       }
-    })
+    });
   }
 
-   logOut(){
-   this.authService.logout();
- }
+  logOut() {
+    this.authService.logout();
+  }
 }

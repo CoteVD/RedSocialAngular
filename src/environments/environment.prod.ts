@@ -1,11 +1,13 @@
+// Seteando el ambiente de la base de datos Firebase
+
 export const environment = {
   production: true,
-  firebaseConfig:{
-    apiKey: "AIzaSyDWMCQoRQMGipjIxm5Cu0AaS0fhmIyj-0c",
-    authDomain: "redsocialangular.firebaseapp.com",
-    databaseURL: "https://redsocialangular.firebaseio.com",
-    projectId: "redsocialangular",
-    storageBucket: "redsocialangular.appspot.com",
-    messagingSenderId: "906689064362"
+  firebaseConfig: {
+    apiKey: 'AIzaSyAy_p60IDkez2AoySSUT6bG1wDSCssuvgU',
+    authDomain: 'redsocialangular-93d26.firebaseapp.com',
+    databaseURL: 'https://redsocialangular-93d26.firebaseio.com',
+    projectId: 'redsocialangular-93d26',
+    storageBucket: 'redsocialangular-93d26.appspot.com',
+    messagingSenderId: '162024628546'
   }
 };
