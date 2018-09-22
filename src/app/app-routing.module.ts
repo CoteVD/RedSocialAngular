@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterPageComponent},
   {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
   {path: 'wall', component: WallComponent},
-  {path: 'wall-write', component: WallWriteComponent},
+  {path: 'wall-write/:id', component: WallWriteComponent},
   {path: '**', component: HomePageComponent}
 ];
 

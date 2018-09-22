@@ -26,6 +26,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 // Servicios
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from './servicios/auth.service';
+import { WallService } from './services/wall.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { AuthService } from './servicios/auth.service';
     AngularFireDatabaseModule,
     FlashMessagesModule
   ],
-  providers: [AuthService, AuthGuard, FlashMessagesService],
+  providers: [AuthService, AuthGuard, FlashMessagesService, WallService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
