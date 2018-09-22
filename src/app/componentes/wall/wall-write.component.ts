@@ -27,6 +27,10 @@ export class WallWriteComponent implements OnInit {
   ) {
     this.activatedRoute.params.subscribe(parametros => {
       this.id = parametros['id'];
+      if (this.id !== 'nuevo') {
+        this._wallService.getID (this.id)
+        .subscribe(data => this.wallWrite = data);
+      } else {}
     });
   }
 
@@ -50,4 +54,8 @@ export class WallWriteComponent implements OnInit {
       );
     }
   }
+ addNew (forma: NgForm) {
+   this.router.navigate(['/wall-write', 'nuevo']);
+   forma.reset();
+ }
 }

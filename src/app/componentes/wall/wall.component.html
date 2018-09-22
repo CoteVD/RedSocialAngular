@@ -9,9 +9,11 @@
         </div>
         <hr>
         <!--Mensajes-->
-        <div class="row m-0 mb-3 containerCardHome message">
+        <div *ngFor="let mensaje of messages" class="row m-0 mb-3 containerCardHome message">
             <div class="col-md-12 mx-auto mt-3">
-                <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet placeat ipsam animi dignissimos architecto officiis doloribus est nihil reprehenderit?</p>
+                <p class="lead text-white">{{mensaje.nombre}}</p>
+                <p class="text-white">{{mensaje.curso}} Medio</p>
+                <p class="text-white">{{mensaje.mensage}}</p>
             </div>
         </div>
     </div>

@@ -34,4 +34,13 @@ export class WallService {
       return res.json();
     });
   }
+
+  getID(key$: string) {
+    let url = `${this.editURL}/${key$}.json`;
+    return this.http.get(url).map(res => res.json());
+  }
+
+  getData() {
+    return this.http.get(this.wallURL).map(res => res.json());
+  }
 }
