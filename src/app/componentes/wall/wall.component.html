@@ -1,0 +1,25 @@
+<!--Muro contenedor de los mensajes-->
+<div class="row mt-4 containerCardHome bg-warning">
+    <div class="col-md-12 mx-auto mt-3 text-center">
+        <p class="lead text-white">Muro</p>
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <button [routerLink]="['/wall-write', 'nuevo']" class="btn btn-success" type="button" name="button">Agregar nuevo mensaje</button>
+            </div>
+        </div>
+        <hr>
+        <!--Mensajes-->
+        <div *ngFor="let k of messages | keys" class="row m-0 mb-3 containerCardHome message">
+            <div class="col-md-12 mx-auto mt-3">
+                <p class="lead text-white">Nombre: {{messages[k].nombre}}</p>
+                <p class="text-white">Curso: {{messages[k].curso}} Medio</p>
+                <p class="text-white">{{messages[k].mensage}}</p>
+                <!--Botones de edicón-->
+                <div class="row">
+                    <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-warning m-1"><i class="far fa-edit"></i></button>
+                    <button (click)="delete(k)" type="button" class="btn btn-danger m-1"><i class="far fa-trash-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

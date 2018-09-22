@@ -1,8 +1,11 @@
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+import { AuthGuard } from './guards/auth.guard';
 
-import { AppRoutingModule } from './app-routing.module';
+// Componentes
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './componentes/home-page/home-page.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
@@ -10,14 +13,23 @@ import { RegisterPageComponent } from './componentes/register-page/register-page
 import { LoginPageComponent } from './componentes/login-page/login-page.component';
 import { PrivatePageComponent } from './componentes/private-page/private-page.component';
 import { NotFoundPageComponent } from './componentes/not-found-page/not-found-page.component';
-import { AuthService } from './servicios/auth.service';
+import { WallComponent } from './componentes/wall/wall.component';
+import { WallWriteComponent } from './componentes/wall/wall-write.component';
+
+// Modulos
+import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabaseModule } from "@angular/fire/database";
-import { environment } from '../environments/environment';
-import { AuthGuard } from './guards/auth.guard';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+
+// Pipes
+import { KeysPipe } from './pipes/keys.pipe';
+
+// Servicios
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { AuthService } from './servicios/auth.service';
+import { WallService } from './services/wall.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +39,13 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     RegisterPageComponent,
     LoginPageComponent,
     PrivatePageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    WallComponent,
+    WallWriteComponent,
+    KeysPipe
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -38,7 +54,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     AngularFireDatabaseModule,
     FlashMessagesModule
   ],
-  providers: [AuthService, AuthGuard, FlashMessagesService],
+  providers: [AuthService, AuthGuard, FlashMessagesService, WallService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
