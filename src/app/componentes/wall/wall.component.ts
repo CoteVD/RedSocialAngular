@@ -13,10 +13,7 @@ export class WallComponent implements OnInit {
   constructor(private _wallService: WallService) {
     this._wallService.getData().subscribe(data => {
       console.log(data);
-      for (let key$ in data) {
-        console.log(data[key$]);
-        this.messages.push(data[key$]);
-      }
+      this.messages = data;
     });
   }
 

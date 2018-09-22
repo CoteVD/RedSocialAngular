@@ -23,6 +23,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
+// Pipes
+import { KeysPipe } from './pipes/keys.pipe';
+
 // Servicios
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from './servicios/auth.service';
@@ -38,7 +41,8 @@ import { WallService } from './services/wall.service';
     PrivatePageComponent,
     NotFoundPageComponent,
     WallComponent,
-    WallWriteComponent
+    WallWriteComponent,
+    KeysPipe
   ],
   imports: [
     HttpModule,
