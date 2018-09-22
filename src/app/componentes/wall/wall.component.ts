@@ -7,7 +7,6 @@ import { WallService } from '../../services/wall.service';
   styleUrls: ['./wall.component.css']
 })
 export class WallComponent implements OnInit {
-
   messages: any[] = [];
 
   constructor(private _wallService: WallService) {
@@ -17,7 +16,15 @@ export class WallComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  delete(key$: string) {
+    this._wallService.delete(key$).subscribe(answer => {
+      if (answer) {
+        console.error(answer);
+      } else {
+        delete this.messages[key$];
+      }
+    });
+  }
 }
