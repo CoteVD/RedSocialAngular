@@ -1,5 +1,8 @@
 .containerApp {
     background-image: url('../assets/fondo.jpg');
-    size: cover;
-    height: 100vh;
+    background-attachment: fixed;
+}
+
+.styleApp {
+    padding-top: 100px;
 }

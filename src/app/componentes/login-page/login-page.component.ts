@@ -24,7 +24,7 @@ export class LoginPageComponent implements OnInit {
     this.AuthService.login(this.email, this.password)
     .then ((res) => {
       this.flashMessage.show('Usuario logueado correctamente.', {cssClass: 'alert-success', timeout: 4000});
-      this.router.navigate(['private']);
+      this.router.navigate(['home']);
       console.log("Login con exito!");
       console.log(res);
     }).catch((err) => {
@@ -37,14 +37,14 @@ export class LoginPageComponent implements OnInit {
   loginGoogle(){
     this.AuthService.googleLogin()
     .then((res) => {
-      this.router.navigate(['private']);
+      this.router.navigate(['home']);
     }).catch(err => console.log(err.message));
   }
 
   loginFacebook(){
     this.AuthService.facebookLogin()
     .then((res) => {
-      this.router.navigate(['private']);
+      this.router.navigate(['home']);
     }).catch(err => console.log(err.message));
   }
 

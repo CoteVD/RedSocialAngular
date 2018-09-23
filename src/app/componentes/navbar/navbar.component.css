@@ -1,9 +1,15 @@
 img.rounded-circle {
     width: 45px;
     height: 45px;
-    ;
 }
 
 .linkNav a:hover {
     color: #FBBA52 !important;
+}
+
+.styleNavbar {
+    width: 100%;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
 }

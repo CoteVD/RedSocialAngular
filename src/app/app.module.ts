@@ -11,7 +11,6 @@ import { HomePageComponent } from './componentes/home-page/home-page.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { RegisterPageComponent } from './componentes/register-page/register-page.component';
 import { LoginPageComponent } from './componentes/login-page/login-page.component';
-import { PrivatePageComponent } from './componentes/private-page/private-page.component';
 import { NotFoundPageComponent } from './componentes/not-found-page/not-found-page.component';
 import { WallComponent } from './componentes/wall/wall.component';
 import { WallWriteComponent } from './componentes/wall/wall-write.component';
@@ -30,6 +29,8 @@ import { KeysPipe } from './pipes/keys.pipe';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from './servicios/auth.service';
 import { WallService } from './services/wall.service';
+import { ProfileComponent } from './componentes/profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -38,11 +39,11 @@ import { WallService } from './services/wall.service';
     NavbarComponent,
     RegisterPageComponent,
     LoginPageComponent,
-    PrivatePageComponent,
     NotFoundPageComponent,
     WallComponent,
     WallWriteComponent,
-    KeysPipe
+    KeysPipe,
+    ProfileComponent
   ],
   imports: [
     HttpModule,

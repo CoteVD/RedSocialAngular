@@ -1,23 +1,28 @@
 <!--Muro contenedor de los mensajes-->
-<div class="row mt-4 containerCardHome bg-warning">
-    <div class="col-md-12 mx-auto mt-3 text-center">
+
+<div class="row mt-5 containerCardHome bg-warning">
+    <div class="col-md-4">
+        <app-profile></app-profile>
+    </div>
+    <div class="col-md-8 mt-3 text-center">
         <p class="lead text-white">Muro</p>
+        <hr>
         <div class="row">
-            <div class="col-md-3 text-center">
-                <button [routerLink]="['/wall-write', 'nuevo']" class="btn btn-success" type="button" name="button">Agregar nuevo mensaje</button>
+            <div class="col-md-3 text-center mb-3">
+                <button [routerLink]="['/wall-write', 'nuevo']" class="btn btnNew" type="button" name="button">Agregar nuevo mensaje</button>
             </div>
         </div>
-        <hr>
+
         <!--Mensajes-->
-        <div *ngFor="let k of messages | keys" class="row m-0 mb-3 containerCardHome message">
+        <div *ngFor="let k of messages | keys" class="row m-0 mb-3 containerCardHome message rounded">
             <div class="col-md-12 mx-auto mt-3">
-                <p class="lead text-white">Nombre: {{messages[k].nombre}}</p>
+                <p class="text-white"><b> Nombre:</b> {{messages[k].nombre}}</p>
                 <p class="text-white">Curso: {{messages[k].curso}} Medio</p>
                 <p class="text-white">{{messages[k].mensage}}</p>
-                <!--Botones de edicón-->
+                <!--Botones de edición-->
                 <div class="row">
-                    <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-warning m-1"><i class="far fa-edit"></i></button>
-                    <button (click)="delete(k)" type="button" class="btn btn-danger m-1"><i class="far fa-trash-alt"></i></button>
+                    <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-warning m-2"><i class="far fa-edit"></i></button>
+                    <button (click)="delete(k)" type="button" class="btn btn-danger m-2"><i class="far fa-trash-alt"></i></button>
                 </div>
             </div>
         </div>
