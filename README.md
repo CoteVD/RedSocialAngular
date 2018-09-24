@@ -1,27 +1,33 @@
-# RedSocialAngular
+# Chao Bullying
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+Chao Bullying es una aplicación mobile y web dirigida a la comunidad escolar con el fin de promover la comunicación y el buen trato entre todas quienes son participes de ella. Los usuarios van a poder leer, comentar y publicar casos, con el fin de apoyar y ayudar a todos aquellos que han vivido o estén en un entorno de bullying.
 
-## Development server
+## Preámbulo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+En el mundo interconectado de hoy, el tema del bullying es muy importante y delicado; se ha visto un aumento de éste en el tiempo y se han acuñado nuevos conceptos como el ciberbullying.
 
-## Code scaffolding
+## Introducción
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Basándonos en ésta premisa, es que hemos desarrollado una aplicación que permite mejorar la comunicación entre los apoderados y el colegio, creando una comunidad más afianzada y en la que los casos de bullying se puedan tratar antes que se salgan de control y muchas veces, evitar situaciones de peligro.
 
-## Build
+## Notas de desarrollo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para éste proyecto, utilizamos las siguientes herramientas de desarrollo:
+- HTML5
+- CSS3
+- Bootstrap 4
+- Angular 6
+- TypeScript
+- Firebase
 
-## Running unit tests
+## Enlace Deploy
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://redsocialangular-93d26.firebaseapp.com/login
 
-## Running end-to-end tests
+## Enlace repositorio
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+https://github.com/valepm0511/RedSocialAngular
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Integrantes
+- Valeria Peñaloza Martinez
+- María José Vargas Donoso

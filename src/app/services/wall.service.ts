@@ -1,21 +1,21 @@
-import { Injectable } from "@angular/core";
-import { Http, Headers } from "@angular/http";
-import { WallWrite } from "../Interface/wallWrite.interface";
-import "rxjs/Rx";
+import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import { WallWrite } from '../Interface/wallWrite.interface';
+import 'rxjs/Rx';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class WallService {
-  wallURL = "https://redsocialangular-93d26.firebaseio.com/mensaje.json";
-  editURL = "https://redsocialangular-93d26.firebaseio.com/mensaje/";
+  wallURL = 'https://redsocialangular-93d26.firebaseio.com/mensaje.json';
+  editURL = 'https://redsocialangular-93d26.firebaseio.com/mensaje/';
 
   constructor(private http: Http) {}
 
   newMessage(wallWrite: WallWrite) {
     const body = JSON.stringify(wallWrite);
     const headers = new Headers({
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     });
     return this.http.post(this.wallURL, body, { headers }).map(res => {
       console.log(res.json());
@@ -25,7 +25,7 @@ export class WallService {
   editMessage(wallWrite: WallWrite, key$: string) {
     const body = JSON.stringify(wallWrite);
     const headers = new Headers({
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     });
     const url = `${this.editURL}/${key$}.json`;
     return this.http.put(url, body, { headers }).map(res => {
