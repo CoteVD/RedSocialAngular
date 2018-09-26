@@ -23,7 +23,7 @@
                 <div class="row">
                     <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-info m-2"><i class="far fa-edit"></i></button>
                     <button (click)="delete(k)" type="button" class="btn btn-danger m-2"><i class="far fa-trash-alt"></i></button>
-                    <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-warning m-2"><i class="fas fa-star"></i></button>
+                    <button (click)="counter(k)" type="button" class="btn btn-warning m-2"><i class="fas fa-star"></i>{{messages[k].likes}}</button>
                 </div>
             </div>
         </div>

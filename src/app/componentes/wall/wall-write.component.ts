@@ -14,7 +14,8 @@ export class WallWriteComponent implements OnInit {
   wallWrite: WallWrite = {
     nombre: '',
     curso: 'Cuarto Medio',
-    mensage: ''
+    mensage: '',
+    likes: 0
   };
 
   nuevo = false;
