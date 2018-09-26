@@ -3,3 +3,9 @@
 .alert.flash-message {
     margin-top: 20px;
 }
+
+.containerApp {
+    background-image: url('./assets/fondo.jpg');
+    background-attachment: fixed;
+    height: 100%;
+}
