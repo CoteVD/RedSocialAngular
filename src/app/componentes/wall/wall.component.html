@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-8 mt-3 text-center">
         <p class="lead text-white">Muro</p>
-        <hr>
+        <hr class="bg-white">
         <div class="row">
             <div class="col-md-3 text-center mb-3">
                 <button [routerLink]="['/wall-write', 'nuevo']" class="btn btnNew" type="button" name="button">Agregar nuevo mensaje</button>
@@ -16,13 +16,15 @@
         <!--Mensajes-->
         <div *ngFor="let k of messages | keys" class="row m-0 mb-3 containerCardHome message rounded">
             <div class="col-md-12 mx-auto mt-3">
-                <p class="text-white"><b> Nombre:</b> {{messages[k].nombre}}</p>
-                <p class="text-white">Curso: {{messages[k].curso}} Medio</p>
-                <p class="text-white">{{messages[k].mensage}}</p>
+                <p class="text-white lead"><span class="titlePost">Nombre:</span> {{messages[k].nombre}}</p>
+                <p class="text-white lead">Curso: {{messages[k].curso}} Medio</p>
+                <p class="text-white lead">{{messages[k].mensage}}</p>
                 <!--Botones de edición-->
                 <div class="row">
                     <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-warning m-2"><i class="far fa-edit"></i></button>
                     <button (click)="delete(k)" type="button" class="btn btn-danger m-2"><i class="far fa-trash-alt"></i></button>
+                    <button type="submit" class="btn btnStyle1 m-2" (click)="likeClick()"><i class="fas fa-thumbs-up"></i></button>
+                    <p class="float-right mt-3  ml-2 text-white">{{numberOfLike}}</p>
                 </div>
             </div>
         </div>

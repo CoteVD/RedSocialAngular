@@ -12,10 +12,15 @@
 
 .message {
     background-color: #18BC9C;
-    padding-top: 75px;
+    padding-top: 30px;
 }
 
 .btnNew {
     background-color: #7B4E39;
+    color: #ffffff;
+}
+
+.btnStyle1 {
+    background-color: #28A745;
     color: #ffffff;
 }
