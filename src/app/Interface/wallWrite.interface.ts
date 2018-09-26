@@ -3,5 +3,6 @@ export interface WallWrite {
   curso: string;
   mensage: string;
   likes: number;
+  fecha: any;
   key$?: string;
 }
