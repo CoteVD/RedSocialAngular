@@ -18,7 +18,7 @@ import { WallService } from '../../services/wall.service';
 
 export class WallComponent implements OnInit {
   messages: any[] = [];
-  numberOfLike = 0;
+  numberOfLike: number = 0;
 
   constructor(private _wallService: WallService) {
     this._wallService.getData().subscribe(data => {
