@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { WallWrite } from '../Interface/wallWrite.interface';
+import { Profile } from '../Interface/profile.interface';
 import 'rxjs/Rx';
 
 @Injectable({
@@ -17,11 +18,13 @@ export class WallService {
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
-    return this.http.post(this.wallURL, body, { headers }).map(res => {
-      console.log(res.json());
+    return this.http.post(this.wallURL, body, { headers })
+    .map(res => {
+      console.log('MENSAJE NUEVO > ' + JSON.stringify(res.json()));
       return res.json();
     });
   }
+
   editMessage(wallWrite: WallWrite, key$: string) {
     const body = JSON.stringify(wallWrite);
     const headers = new Headers({
@@ -29,18 +32,22 @@ export class WallService {
     });
     const url = `${this.editURL}/${key$}.json`;
     return this.http.put(url, body, { headers }).map(res => {
-      console.log(res.json());
+      console.log('MENSAJE EDITAR > ' + JSON.stringify(res.json()));
       return res.json();
     });
   }
 
   getID(key$: string) {
     const url = `${this.editURL}/${key$}.json`;
+    console.log(`KEY REAL > ${key$}`);
     return this.http.get(url).map(res => res.json());
   }
 
   getData() {
-    return this.http.get(this.wallURL).map(res => res.json());
+    return this.http.get(this.wallURL).map(res => {
+      console.log('GET DATA > ' + JSON.stringify(res.json()));
+      return res.json();
+    });
   }
 
   delete(key$: string) {

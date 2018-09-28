@@ -30,6 +30,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from './servicios/auth.service';
 import { WallService } from './services/wall.service';
 import { ProfileComponent } from './componentes/profile/profile.component';
+// import {ProfileNameComponent} from './componentes/wall/wall.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ProfileComponent } from './componentes/profile/profile.component';
     WallComponent,
     WallWriteComponent,
     KeysPipe,
-    ProfileComponent
+    ProfileComponent,
+    // ProfileNameComponent
   ],
   imports: [
     HttpModule,

@@ -10,13 +10,14 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './wall-write.component.html',
   styleUrls: ['./wall-write.component.css']
 })
+
 export class WallWriteComponent implements OnInit {
   wallWrite: WallWrite = {
     nombre: '',
-    curso: 'Cuarto Medio',
-    mensage: '',
-    likes: 0,
-    fecha: new Date()
+    curso: '',
+    mensaje: '',
+    numberOfLike: 0,
+    fecha: new Date().toLocaleString()
   };
 
   nuevo = false;
@@ -39,7 +40,7 @@ export class WallWriteComponent implements OnInit {
   ngOnInit() {}
 
   save() {
-    console.log(this.wallWrite);
+    console.log('SAVE > ' + JSON.stringify(this.wallWrite));
     if (this.id === 'nuevo') {
     this._wallService.newMessage(this.wallWrite).subscribe(
       data => {
