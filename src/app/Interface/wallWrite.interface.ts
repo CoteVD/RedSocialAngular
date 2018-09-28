@@ -1,8 +1,8 @@
 export interface WallWrite {
   nombre: string;
   curso: string;
-  mensage: string;
-  likes: number;
+  mensaje: string;
+  numberOfLike: number;
   fecha: any;
   key$?: string;
 }

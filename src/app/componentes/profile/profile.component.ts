@@ -12,6 +12,7 @@ export class ProfileComponent implements OnInit {
   public nameUser: string;
   public emailUser: string;
   public photoUser: string;
+
   constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit() {

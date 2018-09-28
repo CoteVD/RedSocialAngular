@@ -1,18 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { WallService } from '../../services/wall.service';
+// import { Profile } from '../../Interface/profile.interface';
 
 @Component({
   selector: 'app-wall',
   templateUrl: './wall.component.html',
   styleUrls: ['./wall.component.css']
 })
+
+// export class ProfileNameComponent implements OnInit {
+//  profile: Profile = {
+//    nameUser: ''
+//  };
+//
+//  ngOnInit() {}
+// }
+
 export class WallComponent implements OnInit {
   messages: any[] = [];
-  numberOfLike : number = 0;
+  numberOfLike = 0;
 
   constructor(private _wallService: WallService) {
     this._wallService.getData().subscribe(data => {
-      console.log(data);
+      console.log('ESTA ES LA DATA > ' + JSON.stringify(data));
       this.messages = data;
     });
   }
@@ -29,7 +39,7 @@ export class WallComponent implements OnInit {
     });
   }
 
-  likeClick(){
+  likeClick() {
     this.numberOfLike++;
   }
 
