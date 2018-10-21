@@ -24,7 +24,7 @@
                     <button [routerLink]="['/wall-write', k]" type="button" class="btn btn-info m-2"><i class="far fa-edit"></i></button>
                     <button (click)="delete(k)" type="button" class="btn btn-danger m-2"><i class="far fa-trash-alt"></i></button>
                     <button type="submit" class="btn btnStyle1 m-2" (click)="likeClick()"><i class="fas fa-star"></i></button>
-                    <p class="float-right mt-3  ml-2 text-white">{{messages[k].numberOfLike}}</p>
+                    <p class="float-right mt-3  ml-2 text-white">{{numberOfLike}}</p>
                     <h6 class="text-white dateClass">Fecha: {{messages[k].fecha}}</h6>
                 </div>
             </div>
