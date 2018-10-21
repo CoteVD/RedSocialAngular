@@ -9,6 +9,10 @@ En el mundo interconectado de hoy, el tema del bullying es muy importante y deli
 ## Introducción
 
 Basándonos en ésta premisa, es que hemos desarrollado una aplicación que permite mejorar la comunicación entre los apoderados y el colegio, creando una comunidad más afianzada y en la que los casos de bullying se puedan tratar antes que se salgan de control y muchas veces, evitar situaciones de peligro.
+### Ejemplos del programa
+
+[img!]()
+[img!]()
 
 ## Notas de desarrollo
 
