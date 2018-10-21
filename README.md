@@ -26,7 +26,7 @@ https://redsocialangular-93d26.firebaseapp.com/login
 
 ## Enlace repositorio
 
-https://github.com/valepm0511/RedSocialAngular
+https://github.com/CoteVD/TrabajoRedSocialAngular
 
 ## Integrantes
 - Valeria Peñaloza Martinez
