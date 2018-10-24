@@ -11,7 +11,8 @@ En el mundo interconectado de hoy, el tema del bullying es muy importante y deli
 Basándonos en ésta premisa, es que hemos desarrollado una aplicación que permite mejorar la comunicación entre los apoderados y el colegio, creando una comunidad más afianzada y en la que los casos de bullying se puedan tratar antes que se salgan de control y muchas veces, evitar situaciones de peligro.
 ### Ejemplos del programa
 
-![image](https://github.com/CoteVD/TrabajoRedSocialAngular/blob/master/cel.png) ![image](https://github.com/CoteVD/TrabajoRedSocialAngular/blob/master/cel2.png)
+![redsocial](https://user-images.githubusercontent.com/38705931/47429145-ccaa8580-d76b-11e8-9599-5c4a9a67c6a6.png) Desarrollado para [Laboratoria](www.laboratoria.la)
+![image](https://github.com/CoteVD/TrabajoRedSocialAngular/blob/master/cel2.png)
 
 ## Notas de desarrollo
 
